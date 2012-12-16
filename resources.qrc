@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Team_Number_List.txt</file>
+    </qresource>
+</RCC>
