@@ -9,13 +9,20 @@ MainWindow::MainWindow(QWidget *parent) :
 {
 	ui->setupUi(this);
 	connect(this->menuBar(),SIGNAL(triggered(QAction*)),this, SLOT(menuTriggered(QAction*)));
+
+    //red 1 setup
 	connect(ui->R1_top_plus,SIGNAL(clicked()), this,SLOT(r1TopPlusClicked()));
 	connect(ui->R1_top_minus,SIGNAL(clicked()), this,SLOT(r1TopMinusClicked()));
 	connect(ui->R1_middle_plus,SIGNAL(clicked()), this,SLOT(r1MiddlePlusClicked()));
 	connect(ui->R1_middle_minus,SIGNAL(clicked()), this,SLOT(r1MiddleMinusClicked()));
 	connect(ui->R1_low_plus,SIGNAL(clicked()), this,SLOT(r1LowPlusClicked()));
 	connect(ui->R1_low_minus,SIGNAL(clicked()), this,SLOT(r1LowMinusClicked()));
+    //r1BalanceButtons.addButton(ui->R1_alliance_balance);
+    //r1BalanceButtons.addButton(ui->R1_coopertition_balance);
+    //r1BalanceButtons.setExclusive(true);
 
+
+    //blue 1 setup
 	connect(ui->B1_top_plus,SIGNAL(clicked()), this,SLOT(b1TopPlusClicked()));
 	connect(ui->B1_top_minus,SIGNAL(clicked()), this,SLOT(b1TopMinusClicked()));
 	connect(ui->B1_middle_plus,SIGNAL(clicked()), this,SLOT(b1MiddlePlusClicked()));
@@ -55,7 +62,7 @@ void MainWindow::loadNumberFromFile(){
 			 qDebug()<< "Team Number File Not Found";
 
 		 while (!file.atEnd()) {
-			 QString line = file.readLine();
+             QString line = file.readLine().trimmed();
 			 teamNumberVector.push_back(line);
 		 }
 }

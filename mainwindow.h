@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QFile>
 #include <QVector>
+#include <QButtonGroup>
 
 namespace Ui {
 class MainWindow;
@@ -20,7 +21,10 @@ public:
 private:
 	Ui::MainWindow *ui;
 	void keyPressEvent(QKeyEvent *);
+
 	QVector <QString> teamNumberVector;
+    QButtonGroup r1BalanceButtons;
+
 
 	void loadNumberFromFile();
 	void vectorToCombos();
