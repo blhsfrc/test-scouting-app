@@ -36,6 +36,7 @@ MainWindow::MainWindow(QWidget *parent) :
 	vectorToCombos();
 	ui->R1_combo->setFocusPolicy(Qt::NoFocus);
 	ui->B1_combo->setFocusPolicy(Qt::NoFocus);
+	ui->R2_combo->setFocusPolicy(Qt::NoFocus);
 
 }
 
@@ -72,6 +73,7 @@ void MainWindow::vectorToCombos(){
 	{
 		ui->B1_combo->addItem(teamNumberVector.at(i));
 		ui->R1_combo->addItem(teamNumberVector.at(i));
+		ui->R2_combo->addItem(teamNumberVector.at(i));
 	}
 }
 
