@@ -8,7 +8,6 @@ MainWindow::MainWindow(QWidget *parent) :
 	ui(new Ui::MainWindow)
 {
 	ui->setupUi(this);
-	connect(this->menuBar(),SIGNAL(triggered(QAction*)),this, SLOT(menuTriggered(QAction*)));
 
     //red 1 setup
 	connect(ui->R1_top_plus,SIGNAL(clicked()), this,SLOT(r1TopPlusClicked()));
